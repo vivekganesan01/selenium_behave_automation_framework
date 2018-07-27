@@ -23,6 +23,6 @@ class Pipeline:
         return command_Sh
 
 p = Pipeline()
-p.test("DEV","unittest",".")
+print(p.test("DEV","unittest","f.feature"))
 
 
