@@ -5,7 +5,6 @@ pipeline {
     parameters {
 		choice(name: 'TEST_ENV', choices: 'dev\nuat\nstaging\nprod', description: 'Testing environment:')
 		choice(name: 'TAGS', choices: 'prod\nreg\nsanity\nuat\ndev\nunittest\none', description: 'Tags to be executed:')
-		type(name: 'FEATURE')
     }
     stages {
         stage('Build') {
