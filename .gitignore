@@ -1,2 +1,6 @@
 __init__.py
 *.log
+test.sh
+.idea
+.DS_Store
+__pycache__
