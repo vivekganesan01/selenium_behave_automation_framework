@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Execute') {
             steps {
-                sh 'python ./pipeline.py'
+                sh 'python ./pipe.py'
             }
         }
     }
