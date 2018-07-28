@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			image 'python:3.7-slim'
+			image 'python:3.7.0-stretch'
 		}
     }
     parameters {
@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "BUILD : "
+                sh 'python --version'
                 sh 'pip install r requirements.txt'
             }
         }
@@ -19,6 +20,11 @@ pipeline {
             steps {
                 echo "PIPELINE : "
                 sh 'python ./pipe.py'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "DEPLOY : "
             }
         }
     }
