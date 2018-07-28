@@ -5,19 +5,9 @@ pipeline {
 		choice(name: 'TAGS', choices: 'prod\nreg\nsanity\nuat\ndev\nunittest\none', description: 'Tags to be executed:')
     }
     stages {
-        stage('Build') {
+        stage('Execute') {
             steps {
-                echo "BUILD"
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "TEST"
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo "DEPLOY"
+                sh 'python ./pipeline.py'
             }
         }
     }
