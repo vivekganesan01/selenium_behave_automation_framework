@@ -10,6 +10,8 @@ class Pipe:
 
     def test(self):
         global command_Sh, _tags, _test_env
+        print("Tag name : {}".format(_tags))
+        print("Test env : {}".format(_test_env))
         if _tags is None:
             command_Sh = "-D instance={} feature".format(_test_env.strip())
         else:

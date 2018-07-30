@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			image 'python:3.7.0-stretch'
+			image 'vivekjarvis/py_selenese:behave'
 		}
     }
     parameters {
@@ -11,9 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "BUILD : "
-                sh 'python --version'
-                sh 'pip install r requirements.txt'
+                echo "BUILD :"
             }
         }
         stage('Execute') {
