@@ -17,7 +17,7 @@ pipeline {
         stage('Execute') {
             steps {
                 echo "PIPELINE : "
-                sh 'python3 pipeline.py'
+                sh 'python3 pipe.py'
             }
         }
         stage('Deploy') {
