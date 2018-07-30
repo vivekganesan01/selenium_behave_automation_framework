@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			image 'ubuntu:16.04'
+			image 'vivekjarvis/py_selenese:slim'
 		}
     }
     parameters {
