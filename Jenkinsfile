@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			image 'vivekjarvis/py_selenese:behave'
+			image 'ubuntu:16.04'
 		}
     }
     parameters {
@@ -17,7 +17,6 @@ pipeline {
         stage('Execute') {
             steps {
                 echo "PIPELINE : "
-                sh 'python3 Pipeline.py'
             }
         }
         stage('Deploy') {
