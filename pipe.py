@@ -2,7 +2,7 @@ import os
 import subprocess
 
 class Pipe:
-    
+
     def __init__(self):
         self.ENV_VARS = ['TEST_ENV', 'TAGS']
         self._test_env = os.environ['TEST_ENV'] if 'TEST_ENV' in os.environ else 'UAT'
