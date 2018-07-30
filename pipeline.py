@@ -6,7 +6,7 @@ class Pipeline:
     def __init__(self):
         self.ENV_VARS = ['TEST_ENV', 'TAGS']
         self._test_env = os.environ['TEST_ENV'] if 'TEST_ENV' in os.environ else 'UAT'
-        self._tags = os.environ['TAGS'] if not os.environ['TAGS'] else None
+        self._tags = os.environ['TAGS'] if os.environ['TEST_ENV'] is not "none" else None
         self.command_Sh = ""
 
     def test(self):

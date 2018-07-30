@@ -20,7 +20,8 @@ def _config_parser(context):
     :return: none
     """
     context.parser = configparser.ConfigParser()
-    context.parser.read("/Users/vganesan/PycharmProjects/nu_tls_automation/framework.ini")
+    __ini_path = utilizer.get_project_root() + "framework.ini"
+    context.parser.read(__ini_path)
     context.env_var = {}  # variable to store all the ini file properties,Shared across the framework
     for section in context.parser.sections():
         for x, y in context.parser.items(section):
@@ -168,8 +169,6 @@ def before_all(context):
     :param context: Behave object holder
     :return: none
     """
-
-
     _config_parser(context)
     _log_config(context.env_var.get("APPLICATION_NAME"))
     _application_log(context,context.env_var.get("APPLICATION_NAME"))
