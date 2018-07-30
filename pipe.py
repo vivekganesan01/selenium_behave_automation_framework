@@ -2,20 +2,20 @@ import os
 import subprocess
 
 class Pipe:
-
-    ENV_VARS = ['TEST_ENV', 'TAGS']
-    _test_env = os.environ['TEST_ENV'] if not os.environ['TEST_ENV'] else 'UAT'
-    _tags = os.environ['TAGS'] if not os.environ['TAGS'] else None
-    command_Sh = ""
+    
+    def __init__(self):
+        self.ENV_VARS = ['TEST_ENV', 'TAGS']
+        self._test_env = os.environ['TEST_ENV'] if 'TEST_ENV' in os.environ else 'UAT'
+        self._tags = os.environ['TAGS'] if not os.environ['TAGS'] else None
+        self.command_Sh = ""
 
     def test(self):
-        global command_Sh, _tags, _test_env
-        print("Tag name : {}".format(_tags))
-        print("Test env : {}".format(_test_env))
-        if _tags is None:
-            command_Sh = "-D instance={} feature".format(_test_env.strip())
+        print("Tag name : {}".format(self._tags))
+        print("Test env : {}".format(self._test_env))
+        if self._tags is None:
+            command_Sh = "-D instance={} feature".format(self._test_env.strip())
         else:
-            command_Sh = "-D instance={} --tags={} feature".format(_test_env.strip(),_tags.strip())
+            command_Sh = "-D instance={} --tags={} feature".format(self._test_env.strip(),self._tags.strip())
         return command_Sh
 
 if  __name__ == '__main__':
