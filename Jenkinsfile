@@ -11,15 +11,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                slackSend (color: '#439FE0', message: "BUILD RUNNING")
+                slackSend (color: '#439FE0', message: "Build Running on : Instance = '${env.TEST_ENV}' | Tag = '${env.TAGS}'" )
                 echo "BUILD : Running"
                 slackSend (color: 'good', message: "BUILD: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Execute') {
             steps {
-                slackSend (color: 'warning', message: "BUILD RUNNING")
-                echo "PIPELINE : "
+                slackSend (color: 'warning', message: "Execute Running")
+                echo "PIPELINE : pipeline.py"
                 sh 'python3 pipeline.py'
                 slackSend (color: 'good', message: "EXECUTE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "DEPLOY:"
-                slackSend (color: '#439FE0', message: "DEPLOYMENT SUCCESSFULL : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                slackSend (color: '#439FE0', message: "DEPLOYMENT : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
     }
