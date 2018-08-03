@@ -11,8 +11,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                notifyStarted()
                 echo "BUILD :"
+                slackSend color: 'good', message: 'Message from Jenkins Pipeline'
+
             }
         }
         stage('Execute') {
@@ -27,10 +28,4 @@ pipeline {
             }
         }
     }
-    post {
-      notifyStarted()
-    }
-     def notifyStarted() {
-        slackSend (color: '#FFFF00', message: "STATUS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-   }
 }
