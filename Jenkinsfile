@@ -11,20 +11,23 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "BUILD :"
-                slackSend color: 'good', message: 'Message from Jenkins Pipeline'
-
+                slackSend (color: '#439FE0', message: "BUILD RUNNING")
+                echo "BUILD : Running"
+                slackSend (color: 'good', message: "BUILD: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Execute') {
             steps {
+                slackSend (color: 'warning', message: "BUILD RUNNING")
                 echo "PIPELINE : "
                 sh 'python3 pipeline.py'
+                slackSend (color: 'good', message: "EXECUTE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Deploy') {
             steps {
                 echo "DEPLOY:"
+                slackSend (color: '#439FE0', message: "DEPLOYMENT SUCCESSFULL : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
     }
