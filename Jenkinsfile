@@ -11,6 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                notifyStarted()
                 echo "BUILD :"
             }
         }
@@ -26,4 +27,10 @@ pipeline {
             }
         }
     }
+    post {
+      notifyStarted()
+    }
+     def notifyStarted() {
+        slackSend (color: '#FFFF00', message: "STATUS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+   }
 }
