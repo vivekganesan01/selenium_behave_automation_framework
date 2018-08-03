@@ -118,10 +118,15 @@ def _environment_config(context):
         if browser_stack == "GC" or browser_stack == "GOOGLECHROME" or browser_stack == "CHROME":
             logging.info(" * - Configuring Google Chrome driver ")
             try:
-                context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
+                #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.add_argument('--no-sandbox')
+                chrome_options.add_argument('--headless')
+                chrome_options.add_argument('--disable-gpu')
+                context.driver = webdriver.Chrome(chrome_options=chrome_options)
             except Exception:
                 logging.info(" * - < ..... Exception : unable to config chrome driver ")
-                logging.info("<.....> - {}".format(sys.exc_info()[1]))
+                logging.info(" * - <.....> - {}".format(sys.exc_info()[1]))
         elif browser_stack == "FF" or browser_stack == "FIREFOX" or browser_stack == "MORZILLAFIREFOX":
             logging.info(" * - Configuring Firefox driver .")
             caps = DesiredCapabilities.FIREFOX
