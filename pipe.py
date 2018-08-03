@@ -18,6 +18,7 @@ class Pipe:
             command_Sh = "-D instance={} --tags={} feature".format(self._test_env.strip(),self._tags.strip())
         return command_Sh
 
+
 if  __name__ == '__main__':
     p = Pipe()
     print(p.test())

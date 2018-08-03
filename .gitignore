@@ -5,3 +5,5 @@ test.sh
 .DS_Store
 __pycache__
 pipe.py
+test/*
+instanceinfo.ini

@@ -1,4 +1,7 @@
 __author__ = "Vivek Ganesan"
+__copyright__ = "Specialist titles"
+__email__ = "vivek.ganesan@ntsindia.co.uk"
+__version__ = "1.0.1"
 
 
 from selenium.common.exceptions import WebDriverException,NoSuchElementException
@@ -8,9 +11,8 @@ import configparser
 import os
 
 
-# driver global variable to hold live webdriver instance
+# driver global variable to hold live web driver instance
 driver = None
-
 
 def instance(drive):
     """

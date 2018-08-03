@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			image 'vivekjarvis/py_selenese:slim'
+			image 'vivekjarvis/sp_py_selenese:latest'
 		}
     }
     parameters {

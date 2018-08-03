@@ -1,4 +1,6 @@
-# __author__ = "Vivek Ganesan"
+__author__ = "Vivek Ganesan"
+__copyright__ = "Specialist titles"
+__email__ = "vivek.ganesan@ntsindia.co.uk"
 
 """
 This environment.py offers dependent functions to behave.Utilized before any BDD feature file executes via
@@ -26,7 +28,7 @@ def _config_parser(context):
     for section in context.parser.sections():
         for x, y in context.parser.items(section):
             context.env_var[x.upper()] = y
-
+    # Variable to hold the instance info - will be from -D instance=option | option is from jenkins pipeline
     context.instance = context.config.userdata['instance']
 
 def _log_config(logfile):
@@ -46,7 +48,14 @@ def _log_config(logfile):
     formatter = logging.Formatter('%(levelname)-8s %(message)s')
     console.setFormatter(formatter)  # Tell the handler to use this format
     logging.getLogger('').addHandler(console)      # add the handler to the root logger
-    logging.info(" --  BDD - Specialist titles --")
+    logging.info('''
+ ____                          _           _   _         _     _____   _   _     _        
+/ ___|   _ __     ___    ___  (_)   __ _  | | (_)  ___  | |_  |_   _| (_) | |_  | |   ___ 
+\___ \  | '_ \   / _ \  / __| | |  / _` | | | | | / __| | __|   | |   | | | __| | |  / _ \\
+ ___) | | |_) | |  __/ | (__  | | | (_| | | | | | \__ \ | |_    | |   | | | |_  | | |  __/
+|____/  | .__/   \___|  \___| |_|  \__,_| |_| |_| |___/  \__|   |_|   |_|  \__| |_|  \___|
+        |_|                                                                               
+        ''')
     logging.info(" <<<<<<<<<<< SETTING UP LOG >>>>>>>>>>>>>")
 
 
@@ -64,6 +73,17 @@ def _application_log(context, logfile):
     logging.info("{}".format("^" * 75))
     logging.info(" * - Setting up the logger : Location - {}.log".format(logfile.lower()))
 
+
+def _sauce_lab(context):
+    logging.info("Triggering Sauce lab")
+    desired_cap = {
+        'platform': "Mac OS X 10.9",
+        'browserName': "chrome",
+        'version': "31",
+    }
+    context.driver = webdriver.Remote(
+        command_executor='http://viveknts:6892bd79-c34e-4e3d-9de0-a678cf2dd4d4@ondemand.saucelabs.com:80/wd/hub',
+        desired_capabilities=desired_cap)
 
 def _environment_config(context):
     """
@@ -172,6 +192,7 @@ def before_all(context):
     _config_parser(context)
     _log_config(context.env_var.get("APPLICATION_NAME"))
     _application_log(context,context.env_var.get("APPLICATION_NAME"))
+    #_sauce_lab(context)
     _environment_config(context)
     _app_specific_config(context)
     _driver_utility(context)
@@ -250,9 +271,9 @@ def after_all(context):
     :param context: Behave variable
     :return: none
     """
-    logging.info(" ")
-    logging.info(" ")
-    logging.info("----------------------------------------- END -----------------------------------------------------------")
+    logging.info("")
+    logging.info("")
+    logging.info("----------------------------------------- THE END -----------------------------------------------------------")
     logging.info("@@@ - Closing driver instance")
     context.driver.close()
     if context.env_var.get("EMAIL_NOTIFICATION").lower() != "no":

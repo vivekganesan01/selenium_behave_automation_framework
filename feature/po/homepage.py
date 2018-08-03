@@ -1,8 +1,6 @@
 __author__ = "Vivek Ganesan"
 
-
 from page_objects import PageObject, MultiPageElement, PageElement
-
 
 class HomePage(PageObject):
 
