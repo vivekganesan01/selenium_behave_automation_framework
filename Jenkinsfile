@@ -24,10 +24,13 @@ pipeline {
                 slackSend (color: 'good', message: "EXECUTE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
-        stage('Deploy') {
+        stage('Report') {
             steps {
-                echo "DEPLOY:"
+                echo "REPORT:"
                 slackSend (color: '#439FE0', message: "DEPLOYMENT : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                script {
+                allure ([includeProperties: false, jdk: '', results: [[path: 'allure-results'], [path: 'allure-results']]])
+                }
             }
         }
     }

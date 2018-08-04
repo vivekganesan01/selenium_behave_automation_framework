@@ -18,9 +18,9 @@ class Pipeline:
         print("Tag name : {}".format(self._tags))
         print("Test env : {}".format(self._test_env))
         if self._tags is None:
-            command_Sh = "-D instance={} feature".format(self._test_env.strip())
+            command_Sh = "-D instance={} -f allure_behave.formatter:AllureFormatter -o allure-results feature".format(self._test_env.strip())
         else:
-            command_Sh = "-D instance={} --tags={} feature".format(self._test_env.strip(),self._tags.strip())
+            command_Sh = "-D instance={} --tags={} -f allure_behave.formatter:AllureFormatter -o allure-results feature".format(self._test_env.strip(),self._tags.strip())
         return command_Sh
 
 if  __name__ == '__main__':
