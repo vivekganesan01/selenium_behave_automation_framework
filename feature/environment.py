@@ -109,7 +109,8 @@ def _environment_config(context):
     logging.info(" * - Setting up the web driver instance")
 
     # Setting up the driver executable based on OS running
-    exe_path = "drivers/mac/chromedriver" if 'Darwin'in str(platform.platform()) else "drivers/chromedriver"
+    # exe_path = "drivers/mac/chromedriver" if 'Darwin'in str(platform.platform()) else "drivers/chromedriver"
+    exe_path = "drivers/chromedriver"
 
     if device_stack == "Mobile":
         logging.info(" * - Mobile emulator - Pixel 2")
