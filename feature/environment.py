@@ -9,11 +9,13 @@ behave framework.
 
 from selenium import webdriver
 import logging
+import requests
 from datetime import datetime
 import configparser
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from utilizer_selense import utilizer
+import platform
 
 def _config_parser(context):
     """
@@ -23,13 +25,17 @@ def _config_parser(context):
     """
     context.parser = configparser.ConfigParser()
     __ini_path = utilizer.get_project_root() + "framework.ini"
-    context.parser.read(__ini_path)
+    try:
+        context.parser.read(__ini_path)
+    except Exception:
+        print(" <../\\ framework.ini file not found ../\\>")
+        assert False , "framework.ini file not found .."
     context.env_var = {}  # variable to store all the ini file properties,Shared across the framework
     for section in context.parser.sections():
         for x, y in context.parser.items(section):
             context.env_var[x.upper()] = y
     # Variable to hold the instance info - will be from -D instance=option | option is from jenkins pipeline
-    context.instance = context.config.userdata['instance']
+    context.instance = str(context.config.userdata['instance']).upper()
 
 def _log_config(logfile):
     """
@@ -64,7 +70,7 @@ def _application_log(context, logfile):
     Just for application information to be logged on reporting
     :param context: Behave object holder variable
     :param logfile: log file name
-    :return: None
+    :return: none
     """
     logging.info("{}".format("*" * 83))
     logging.info("* - *-                                  {}".format(context.env_var.get("APPLICATION_NAME")))
@@ -75,6 +81,11 @@ def _application_log(context, logfile):
 
 
 def _sauce_lab(context):
+    """
+    For cloud sauce lab integration
+    :param context: Behave object holder variable
+    :return: none
+    """
     logging.info("Triggering Sauce lab")
     desired_cap = {
         'platform': "Mac OS X 10.9",
@@ -89,12 +100,16 @@ def _environment_config(context):
     """
     For setting up automation environment to be used for test execution.
     :param context: Behave object holder variable
-    :return: None
+    :return: none
     """
+    logging.info("")
     logging.info(" <<<<<<<<<<< SETTING UP AUTOMATION ENVIRONMENT >>>>>>>>>>>>>")
     device_stack = context.env_var.get("DEVICE")
     logging.info(" * - Setting up the device platform - {}".format(device_stack))
     logging.info(" * - Setting up the web driver instance")
+
+    # Setting up the driver executable based on OS running
+    exe_path = "drivers/mac/chromedriver" if 'Darwin'in str(platform.platform()) else "drivers/chromedriver"
 
     if device_stack == "Mobile":
         logging.info(" * - Mobile emulator - Pixel 2")
@@ -106,9 +121,14 @@ def _environment_config(context):
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
         # Create driver, pass it the path to the chromedriver file and the special configurations you want to run
         logging.info(" * - Setting up chrome for mobile environment")
-        context.driver = webdriver.Chrome(
-            executable_path='drivers/chromedriver',
-            options=chrome_options)
+        try:
+            context.driver = webdriver.Chrome(
+                executable_path=exe_path,
+                options=chrome_options)
+        except Exception:
+            logging.info(" * - < ..... Exception : unable to config chrome driver ")
+            logging.info(" * - <.....> - {}".format(sys.exc_info()[1]))
+            assert False, "Issue in Chrome driver"
 
     elif device_stack == "Website":
         # Browser driver configuration
@@ -120,14 +140,15 @@ def _environment_config(context):
             try:
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
                 chrome_options = webdriver.ChromeOptions()
-                chrome_options.add_argument('--no-sandbox')
-                chrome_options.add_argument('--headless')
-                chrome_options.add_argument('--disable-gpu')
-                context.driver = webdriver.Chrome(executable_path='drivers/chromedriver',options=chrome_options)
-                context.driver.set_page_load_timeout(10)
+                #chrome_options.add_argument('--no-sandbox')
+                #chrome_options.add_argument('--headless')
+                #chrome_options.add_argument('--disable-gpu')
+                context.driver = webdriver.Chrome(executable_path=exe_path, options=chrome_options)
+                context.driver.set_page_load_timeout(20)
             except Exception:
                 logging.info(" * - < ..... Exception : unable to config chrome driver ")
                 logging.info(" * - <.....> - {}".format(sys.exc_info()[1]))
+                assert False, "Issue in Chrome driver"
         elif browser_stack == "FF" or browser_stack == "FIREFOX" or browser_stack == "MORZILLAFIREFOX":
             logging.info(" * - Configuring Firefox driver .")
             caps = DesiredCapabilities.FIREFOX
@@ -139,13 +160,15 @@ def _environment_config(context):
             except Exception:
                 logging.info(" * - < ..... Exception : unable to config Firefox driver ")
                 logging.info("<.....> - {}".format(sys.exc_info()[1]))
+                assert False , "Issue in firefox driver"
         elif browser_stack == "SAFARI":
             try:
                 logging.info(" * - Configuring Safari driver .")
                 context.driver = webdriver.Safari()
             except Exception:
-                logging.info(" * - < ..... Exception : unable to config Firefox driver ")
+                logging.info(" * - < ..... Exception : unable to config safari driver ")
                 logging.info("<.....> - {}".format(sys.exc_info()[1]))
+                assert False, "Issue in chrome driver"
 
     else:
         logging.info(" * - Configuring Firefox driver ")
@@ -158,6 +181,7 @@ def _environment_config(context):
         except Exception:
             logging.info(" * - < ..... Exception : unable to config Firefox driver ")
             logging.info("<.....> - {}".format(sys.exc_info()[1]))
+            assert False, "Issue in firefox driver"
 
 
 def _app_specific_config(context):
@@ -187,6 +211,18 @@ def _driver_utility(context):
     utilizer.instance(context.driver)
     utilizer.open_url(context.url)
     utilizer.set_maximize()
+    # Verifying the URL:
+    logging.info(" * - Verify the http of URL")
+    req = requests.get(context.url)
+    logging.info(" STATUS CODE : {}".format(req.status_code))
+
+    if int(req.status_code) is not int(200):
+        try:
+            logging.info("Raising exception since url is throwing {}".format(req.status_code))
+        except Exception:
+            logging.info("< . /\\ Exception .. >")
+            logging.info("REASON: URL {} is throwing {} status code".format(context.url, req.status_code))
+            assert False,"Please check the URL"
 
 
 def before_all(context):
@@ -242,7 +278,8 @@ def after_scenario(context,scenario):
     :return: none
     """
     logging.info("{}".format("*" * 75))
-    logging.info("{} - {}".format(scenario.name, scenario.status))
+    STATUS = "PASS" if "passed" in str(scenario.status) else "FAIL"
+    logging.info("{} : {}".format(scenario.name, STATUS))
     logging.info("{}".format("*" * 75))
     logging.info(" ")
 
@@ -254,7 +291,6 @@ def before_step(context,step):
     :param step: Behave variable
     :return: none
     """
-    logging.info(" ")
     logging.info("STEP : {}".format(step.name))
     logging.info(" ")
 
@@ -267,23 +303,25 @@ def after_step(context,step):
     :return: none
     """
     logging.info("")
-    logging.info("STEP : {} - {} ".format(step.name,step.status))
-    logging.info("{}".format("-"*75))
+    STATUS = "PASS" if "passed" in str(step.status) else "FAIL"
+    logging.info("---------------------------- STEP : {} - {} ".format(step.name,STATUS))
+    #logging.info("{}".format("-"*75))
+    logging.info("")
 
 
 def after_all(context):
     """
-    Runs after everything is completed.To close webdriver instance and send email
+    Runs after everything is completed.To close web driver instance and send email
     :param context: Behave variable
     :return: none
     """
     logging.info("")
-    logging.info("")
     logging.info("----------------------------------------- THE END -----------------------------------------------------------")
     logging.info("@@@ - Closing driver instance")
     context.driver.close()
-    if context.env_var.get("EMAIL_NOTIFICATION").lower() != "no":
-        logging.info(" <<< SENDING EMAIL >>")
+    #if context.env_var.get("EMAIL_NOTIFICATION").lower() != "no":
+        # logging.info(" <<< SENDING EMAIL >>")
         # context.utility.send_email("@gmail.com","@gmail.com","StylePlay","styleplay.log")
         # logging.info("Email has been sent.")
     context.driver.quit()
+    logging.info("Bye.")

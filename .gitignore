@@ -2,8 +2,11 @@ __init__.py
 *.log
 test.sh
 .idea
+.idea/**
 .DS_Store
 __pycache__
 pipe.py
-test/*
+**/test
+test/**
 instanceinfo.ini
+allure-results/**
