@@ -1,4 +1,3 @@
-allure-behave==2.5.0
 allure-python-commons==2.5.0
 allure2-behave==2.3.4
 atomicwrites==1.1.5
