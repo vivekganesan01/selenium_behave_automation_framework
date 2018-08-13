@@ -1,8 +1,6 @@
 pipeline {
     agent {
-       docker {
 			label 'priceless_mcnulty'
-		}
     }
     parameters {
 		choice(name: 'TEST_ENV', choices: 'DEV\nUAT\nSTAGING\nPROD', description: 'Testing environment:')
