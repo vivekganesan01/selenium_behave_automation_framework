@@ -1,7 +1,7 @@
 pipeline {
     agent {
        docker {
-			label 'vivekjarvis/selenium_py_jar_ch:v1.0'
+			label 'priceless_mcnulty'
 		}
     }
     parameters {
