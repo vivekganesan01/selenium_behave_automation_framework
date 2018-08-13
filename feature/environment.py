@@ -145,7 +145,7 @@ def _environment_config(context):
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
                 context.driver = webdriver.Remote(
-                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    command_executor='http://54.171.169.47:4444/wd/hub',
                     desired_capabilities=DesiredCapabilities.CHROME)
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver", options=chrome_options)
                 context.driver.set_page_load_timeout(20)
