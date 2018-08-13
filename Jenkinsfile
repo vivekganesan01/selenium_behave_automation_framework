@@ -1,6 +1,6 @@
 pipeline {
     agent {
-			label 'priceless_mcnulty'
+			label 'vivekjarvis/selenium_py_jar_ch:v1.0'
     }
     parameters {
 		choice(name: 'TEST_ENV', choices: 'DEV\nUAT\nSTAGING\nPROD', description: 'Testing environment:')
