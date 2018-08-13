@@ -144,7 +144,10 @@ def _environment_config(context):
                 chrome_options.add_argument('--no-sandbox')
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
-                context.driver = webdriver.Chrome(executable_path="drivers/chromedriver", options=chrome_options)
+                context.driver = webdriver.Remote(
+                    command_executor='http://127.0.0.1:4444/wd/hub',
+                    desired_capabilities=DesiredCapabilities.CHROME)
+                #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver", options=chrome_options)
                 context.driver.set_page_load_timeout(20)
             except Exception:
                 logging.info(" * - < ..... Exception : unable to config chrome driver ")
