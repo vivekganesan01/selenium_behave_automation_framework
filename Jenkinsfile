@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-			image 'vivekjarvis/selenium_py_jar_ch:v3.0'
+			image 'vivekjarvis/selenium_py_jar_ch:v4.0'
 			args '-v /dev/shm:/dev/shm'
 		}
 	}
