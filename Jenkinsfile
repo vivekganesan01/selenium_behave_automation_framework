@@ -1,7 +1,9 @@
 pipeline {
     agent {
-			label 'vivekjarvis/selenium_py_jar_ch:v1.0'
-    }
+        docker {
+			image 'vivekjarvis/selenium_py_jar_ch:v2.0'
+		}
+	}
     parameters {
 		choice(name: 'TEST_ENV', choices: 'DEV\nUAT\nSTAGING\nPROD', description: 'Testing environment:')
 		choice(name: 'TAGS', choices: 'prod\nreg\nsanity\nuat\ndev\nunittest\nnone', description: 'Tags to be executed:')
