@@ -1,7 +1,6 @@
 pipeline {
     agent {
        docker {
-			//image 'vivekjarvis/sp_py_selenese:latest'
 			image 'vivekjarvis/selenium_py_jar_ch:v1.0'
 			args '-p 4444:4444 --shm-size=2g'
 		}
