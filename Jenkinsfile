@@ -3,7 +3,7 @@ pipeline {
        docker {
 			//image 'vivekjarvis/sp_py_selenese:latest'
 			image 'vivekjarvis/selenium_py_jar_ch:v1.0'
-			args '-d -p 4444:4444 --shm-size=2g'
+			args '-p 4444:4444 --shm-size=2g'
 		}
     }
     parameters {
