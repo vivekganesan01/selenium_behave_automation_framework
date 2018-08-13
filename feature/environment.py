@@ -145,7 +145,7 @@ def _environment_config(context):
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
                 chrome_options.add_argument("--disable-extensions")
-                chrome_options.addArguments("--disable-dev-shm-usage")
+                chrome_options.add_argument("--disable-dev-shm-usage")
                 capabilities = chrome_options.to_capabilities()
                 context.driver = webdriver.Remote(
                     command_executor='http://localhost:4444/wd/hub',
