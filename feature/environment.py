@@ -15,6 +15,8 @@ import configparser
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from utilizer_selense import utilizer
+from selenium.webdriver import Chrome
+from selenium.webdriver.chrome.options import Options
 import platform
 
 def _config_parser(context):
@@ -140,7 +142,7 @@ def _environment_config(context):
             logging.info(" * - Configuring Google Chrome driver ")
             try:
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
-                chrome_options = webdriver.ChromeOptions()
+                chrome_options = Options()
                 chrome_options.add_argument('--no-sandbox')
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
