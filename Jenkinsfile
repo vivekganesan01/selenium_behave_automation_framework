@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-			image 'vivekjarvis/sele_py_jar_allure:latest'
+			image 'vivekjarvis/sele_py_jar_allure:v1.0'
 		}
 	}
     parameters {
@@ -29,7 +29,7 @@ pipeline {
                 echo "REPORT:"
                 slackSend (color: '#439FE0', message: "DEPLOYMENT : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
                 script {
-                allure ([includeProperties: false, jdk: '/usr/lib/jvm/java-7-openjdk-amd64', results: [[path: 'allure-results'], [path: 'allure-results']]])
+                allure ([includeProperties: false, jdk: '', results: [[path: 'allure-results'], [path: 'allure-results']]])
                 }
             }
         }
