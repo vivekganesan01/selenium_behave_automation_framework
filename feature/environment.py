@@ -144,8 +144,10 @@ def _environment_config(context):
                 chrome_options.add_argument('--no-sandbox')
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
-                #chrome_options.add_argument("--disable-extensions")
-                #chrome_options.add_argument("--disable-dev-shm-usage")
+                chrome_options.add_argument('--dns-prefetch-disable')
+                chrome_options.add_argument("--disable-extensions")
+                chrome_options.add_argument("--disable-dev-shm-usage")
+                chrome_options.add_argument("--start-maximized")
                 #capabilities = chrome_options.to_capabilities()
                 context.driver = webdriver.Chrome(chrome_options=chrome_options)
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver", options=chrome_options)
@@ -215,7 +217,7 @@ def _driver_utility(context):
     """
     utilizer.instance(context.driver)
     utilizer.open_url(context.url)
-    utilizer.set_maximize()
+    #utilizer.set_maximize()
     # Verifying the URL:
     logging.info(" * - Verify the http of URL")
     req = requests.get(context.url)
