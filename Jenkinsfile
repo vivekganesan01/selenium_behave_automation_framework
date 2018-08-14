@@ -1,8 +1,7 @@
 pipeline {
     agent {
         docker {
-			image 'vivekjarvis/selenium_py_jar_ch:v4.0'
-			args '-v /dev/shm:/dev/shm'
+			image 'vivekjarvis/sele_py_jar_allure:latest'
 		}
 	}
     parameters {
