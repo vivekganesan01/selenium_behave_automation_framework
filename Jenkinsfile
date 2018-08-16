@@ -11,26 +11,26 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                //slackSend (color: '#439FE0', message: "Build Running on : Instance = '${env.TEST_ENV}' | Tag = '${env.TAGS}'" )
+                slackSend (color: '#439FE0', message: "Build Running on : Instance = '${env.TEST_ENV}' | Tag = '${env.TAGS}'" )
                 echo "BUILD : Running"
-                //slackSend (color: 'good', message: "BUILD: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                slackSend (color: 'good', message: "BUILD: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Execute') {
             steps {
-                //slackSend (color: 'warning', message: "Execute Running")
+                slackSend (color: 'warning', message: "Execute Running")
                 echo "PIPELINE : pipeline.py"
                 sh 'python3 pipeline.py'
-                //slackSend (color: 'good', message: "EXECUTE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                slackSend (color: 'good', message: "EXECUTE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
             }
         }
         stage('Report') {
             steps {
                 echo "REPORT:"
-                //slackSend (color: '#439FE0', message: "DEPLOYMENT : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-                //script {
-                //allure ([includeProperties: false, jdk: '', results: [[path: 'allure-results'], [path: 'allure-results']]])
-                //}
+                slackSend (color: '#439FE0', message: "DEPLOYMENT : Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                script {
+                allure ([includeProperties: false, jdk: '', results: [[path: 'allure-results'], [path: 'allure-results']]])
+                }
             }
         }
     }
