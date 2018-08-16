@@ -142,7 +142,7 @@ def _environment_config(context):
             logging.info(" * - Configuring Google Chrome driver ")
             try:
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
-                chrome_options = Options()
+                chrome_options = webdriver.ChromeOptions()
                 chrome_options.add_argument('--no-sandbox')
                 chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
