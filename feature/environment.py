@@ -6,6 +6,7 @@ __email__ = "vivek.ganesan@ntsindia.co.uk"
 This environment.py offers dependent functions to behave.Utilized before any BDD feature file executes via
 behave framework.
 """
+# Version v1.0
 
 from selenium import webdriver
 import logging
@@ -15,9 +16,6 @@ import configparser
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import sys
 from utilizer_selense import utilizer
-from selenium.webdriver import Chrome
-from selenium.webdriver.chrome.options import Options
-import platform
 
 def _config_parser(context):
     """
