@@ -325,7 +325,7 @@ def after_all(context):
     logging.info("")
     logging.info("----------------------------------------- THE END -----------------------------------------------------------")
     logging.info("@@@ - Closing driver instance")
-    context.driver.close()
+    #context.driver.close()
     #if context.env_var.get("EMAIL_NOTIFICATION").lower() != "no":
         # logging.info(" <<< SENDING EMAIL >>")
         # context.utility.send_email("@gmail.com","@gmail.com","StylePlay","styleplay.log")
