@@ -276,6 +276,7 @@ def before_scenario(context,scenario):
     # re opening url again before all the scenario so that any test will start from home page
     utilizer.open_url(context.url)
     utilizer.time_elapsed(3)
+    logging.info(" ")
 
 
 
