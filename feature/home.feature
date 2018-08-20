@@ -11,20 +11,20 @@ Feature: TLS : Validate home page features
         | Title               |
         | Home Page - The TLS |
 
-  @unittest @uat @prod @staging
+  @unittest2 @uat @prod @staging
     # To check all the header link response code
   Scenario: Make sure all the header links are working
       Given Gather all the header link
       Then Check the http response code for the link
 
-  @unittest @uat @prod @staging
+  @unittest3 @uat @prod @staging
     # To check subject page
   Scenario: Make sure subject page works as expected
       Given Navigate to subject category
       Then Gather all the article-section header and check the status code
 
   @unittest4 @uat @prod @staging
-    # Check load more button on subject back
+    # Checking all the links in arts section
   Scenario Outline: Make sure article section doesn't hold broken article
       Given Navigate to subject category
       Then Go to the "<section>" article section
@@ -34,7 +34,7 @@ Feature: TLS : Validate home page features
         | section |
         | ARTS    |
 
-  @unittest5 @uat @prod @staging
+  @unittest @uat @prod @staging
       # Check load more button on single article section
   Scenario Outline: Check the default count of the single article section page
      Given Navigate to subject category
@@ -45,7 +45,7 @@ Feature: TLS : Validate home page features
       | section | articlecount |
       | ARTS    |   12         |
 
-  @unittest6 @uat @prod @staging
+  @unittest @uat @prod @staging
       # Check load more button on single article section
   Scenario Outline: Make sure load more button work on single article section
         Given Navigate to subject category
@@ -56,7 +56,7 @@ Feature: TLS : Validate home page features
         | section |
         | ARTS    |
 
-  @unittest7 @prod
+  @unittest @prod
     # Check login feature
   Scenario Outline: Make sure subscribe login and logout functionality works
       Given As a user, Click on login

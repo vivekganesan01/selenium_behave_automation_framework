@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d24d725-8321-4a90-b486-3cb8a40de383" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home.feature" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="home.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature/home.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+            <state relative-caret-position="380">
+              <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -48,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="environment.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="149" column="35" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+            <state relative-caret-position="206">
+              <caret line="146" selection-start-line="146" selection-end-line="148" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -174,8 +173,8 @@
         <option value="$PROJECT_DIR$/utilizer_selense/utilizer.py" />
         <option value="$PROJECT_DIR$/feature/steps/commonsteps.py" />
         <option value="$PROJECT_DIR$/runner_allure.sh" />
-        <option value="$PROJECT_DIR$/feature/home.feature" />
         <option value="$PROJECT_DIR$/feature/environment.py" />
+        <option value="$PROJECT_DIR$/feature/home.feature" />
       </list>
     </option>
   </component>
@@ -395,8 +394,8 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39030302" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.32" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32188842" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.32" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32188842" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -614,17 +613,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature/home.feature">
+    <entry file="file://$PROJECT_DIR$/feature/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="206">
+          <caret line="146" selection-start-line="146" selection-end-line="148" selection-end-column="71" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/feature/environment.py">
+    <entry file="file://$PROJECT_DIR$/feature/home.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="149" column="35" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+        <state relative-caret-position="380">
+          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
         </state>
       </provider>
     </entry>
