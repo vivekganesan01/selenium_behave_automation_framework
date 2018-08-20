@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d24d725-8321-4a90-b486-3cb8a40de383" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/environment.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/steps/commonsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/steps/commonsteps.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,8 +32,8 @@
       <file leaf-file-name="home.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/feature/home.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+            <state relative-caret-position="199">
+              <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -38,8 +41,8 @@
       <file leaf-file-name="commonsteps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+            <state relative-caret-position="1924">
+              <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
               <folding>
                 <element signature="e#31#60#0" expanded="true" />
               </folding>
@@ -50,8 +53,8 @@
       <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="146" selection-start-line="146" selection-end-line="148" selection-end-column="71" />
+            <state relative-caret-position="305">
+              <caret line="152" column="37" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -59,8 +62,8 @@
       <file leaf-file-name="tls.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tls.log">
           <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="806">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="546">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -90,7 +93,6 @@
       <find />
       <find>type_on_element</find>
       <find>cli</find>
-      <find />
       <find>before</find>
       <find>config.</find>
       <find>en</find>
@@ -104,7 +106,6 @@
       <find>instance</find>
       <find>page_element_validator</find>
       <find>naviga</find>
-      <find />
       <find>to_read_full_article_text</find>
       <find>list_of_article_under_section</find>
       <find>visibili</find>
@@ -112,10 +113,10 @@
       <find>visibility_of_ele_located</find>
       <find>if</find>
       <find>else</find>
-      <find />
       <find>True</find>
       <find>re</find>
       <find>open</find>
+      <find>Make sure load more button work on single article section</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,8 +172,8 @@
         <option value="$PROJECT_DIR$/behave.ini" />
         <option value="$PROJECT_DIR$/framework.ini" />
         <option value="$PROJECT_DIR$/utilizer_selense/utilizer.py" />
-        <option value="$PROJECT_DIR$/feature/steps/commonsteps.py" />
         <option value="$PROJECT_DIR$/runner_allure.sh" />
+        <option value="$PROJECT_DIR$/feature/steps/commonsteps.py" />
         <option value="$PROJECT_DIR$/feature/environment.py" />
         <option value="$PROJECT_DIR$/feature/home.feature" />
       </list>
@@ -196,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -224,6 +224,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,31 +395,30 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39030302" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.32" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32188842" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.32" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32618025" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="R Graphics" order="4" />
+      <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3272727" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32969698" />
     </layout>
     <layout-to-restore>
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14806867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -427,17 +427,18 @@
       <window_info anchor="right" id="R Graphics" order="4" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39030302" />
       <window_info anchor="right" id="R Packages" order="5" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3272727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.07151515" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.1037196" side_tool="true" weight="0.26909092" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32969698" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,18 +592,8 @@
     <entry file="file://$PROJECT_DIR$/output.png" />
     <entry file="file://$PROJECT_DIR$/tls.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="806">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
-          <folding>
-            <element signature="e#31#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="546">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -613,17 +604,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1924">
+          <caret line="77" column="24" lean-forward="true" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <element signature="e#31#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feature/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="146" selection-start-line="146" selection-end-line="148" selection-end-column="71" />
+        <state relative-caret-position="305">
+          <caret line="152" column="37" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/feature/home.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+        <state relative-caret-position="199">
+          <caret line="127" column="2" selection-start-line="127" selection-start-column="2" selection-end-line="127" selection-end-column="2" />
         </state>
       </provider>
     </entry>

@@ -142,12 +142,15 @@ def _environment_config(context):
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
                 chrome_options = webdriver.ChromeOptions()
                 chrome_options.add_argument('--no-sandbox')
-                chrome_options.add_argument('--headless')
+                #chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
                 #chrome_options.add_argument('--dns-prefetch-disable')
                 #chrome_options.add_argument("--disable-extensions")
                 #chrome_options.add_argument("--disable-dev-shm-usage")
-                WINDOW_SIZE = "1280,276"
+                WINDOW_SIZE = "1440,900" # standard size of windows
+                IPAD_PRO_SIZE = "1024,1366"
+                IPAD = "768,1024"
+                IPHONE678 = "375,667"
                 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
                 #capabilities = chrome_options.to_capabilities()
                 context.driver = webdriver.Chrome(chrome_options=chrome_options)

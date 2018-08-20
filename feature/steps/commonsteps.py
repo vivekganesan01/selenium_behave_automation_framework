@@ -72,7 +72,8 @@ def step_impl(context,section):
     for each_article_section in total_article_section:
         if each_article_section.text == section:
             logging.info(" <.> - Into the section {} page".format(section))
-            utilizer.click_on_element(each_article_section,str(each_article_section.text))
+            logging.info(" <.> - Clicking on element - {}".format(str(each_article_section.text)))
+            utilizer.move_to_element_click(each_article_section)
             utilizer.time_elapsed(5)
             flag = False
             break

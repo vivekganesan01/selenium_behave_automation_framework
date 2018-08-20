@@ -1,6 +1,7 @@
 # __author__ = "Vivek Ganesan"
 Feature: TLS : Validate home page features
 
+
   @unittest @uat @prod @staging
     # To check TLS is running
   Scenario Outline: Make sure TLS in up and running
@@ -11,19 +12,22 @@ Feature: TLS : Validate home page features
         | Title               |
         | Home Page - The TLS |
 
-  @unittest2 @uat @prod @staging
+
+  @uat @prod @staging
     # To check all the header link response code
   Scenario: Make sure all the header links are working
       Given Gather all the header link
       Then Check the http response code for the link
 
-  @unittest3 @uat @prod @staging
+
+  @uat @prod @staging
     # To check subject page
   Scenario: Make sure subject page works as expected
       Given Navigate to subject category
       Then Gather all the article-section header and check the status code
 
-  @unittest4 @uat @prod @staging
+
+  @uat @prod @staging
     # Checking all the links in arts section
   Scenario Outline: Make sure article section doesn't hold broken article
       Given Navigate to subject category
@@ -34,8 +38,9 @@ Feature: TLS : Validate home page features
         | section |
         | ARTS    |
 
-  @unittest @uat @prod @staging
-      # Check load more button on single article section
+
+  @uat @prod @staging
+      # Check load more button on single article section for default count
   Scenario Outline: Check the default count of the single article section page
      Given Navigate to subject category
      Then Go to the "<section>" article section
@@ -45,7 +50,8 @@ Feature: TLS : Validate home page features
       | section | articlecount |
       | ARTS    |   12         |
 
-  @unittest @uat @prod @staging
+
+  @uat @prod @staging
       # Check load more button on single article section
   Scenario Outline: Make sure load more button work on single article section
         Given Navigate to subject category
@@ -68,14 +74,15 @@ Feature: TLS : Validate home page features
         | username            | password            |
         | properties.USERNAME | properties.PASSWORD |
 
-  @unittest8 @uat @prod @staging
+
+  @uat @prod @staging
     # check sub button
   Scenario: Make sure subscription page is working
       Given As a user, Click on subcription button
       Then User should be in the "Subscribe to The Times Literary Supplement" page
 
 
-  @unittest9 @prod @staging
+  @prod @staging
     # check private article after login
   Scenario Outline: Check the private article for logged in user
       Given As a user, Click on login
@@ -89,7 +96,7 @@ Feature: TLS : Validate home page features
         | properties.USERNAME | properties.PASSWORD |
 
 
-  @unittest10 @uat @prod @staging
+  @uat @prod @staging
     # check private article before login
   Scenario: Check the private article for non user
       Given Make sure user not logged in
@@ -97,7 +104,7 @@ Feature: TLS : Validate home page features
       And User should not be able to read full article
 
 
-  @unittest11 @uat @prod @staging
+  @uat @prod @staging
     # Search option
   Scenario: Validate search option in TLS
       Given Click on search
@@ -105,20 +112,20 @@ Feature: TLS : Validate home page features
       Then Search should return related article
 
 
-  @unittest12 @uat @prod @staging
+  @uat @prod @staging @try
     # Validating go to top button on section
   Scenario: Validate go to top feature
       Given Open subjects page
       Then Open any section
       Then Navigate to bottom and validate go to top button
 
-  @unittest13 @uat @prod @staging
+  @uat @prod @staging @try
     # validate go to on each page
   Scenario: Validate go to top on each page
       Given Click on latest edition
       Then Navigate to bottom and validate go to top button
 
-  @unittest14 @uat @prod @staging
+  @uat @prod @staging @try
    # Validating go to top on article page
   Scenario: Validate go to top on single article
       Given Open subjects page
