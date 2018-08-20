@@ -78,7 +78,6 @@ def open_url(url):
     logging.info(" <.> - open_url Method : ({})".format(url))
     driver.get(url)
     logging.info(" <.> - Opening the url")
-    logging.info("")
 
 def navigate_to(url):
     """

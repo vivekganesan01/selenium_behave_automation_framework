@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d24d725-8321-4a90-b486-3cb8a40de383" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/feature/home.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feature/steps/commonsteps.py" beforeDir="false" afterPath="$PROJECT_DIR$/feature/steps/commonsteps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner_allure.sh" beforeDir="false" afterPath="$PROJECT_DIR$/runner_allure.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilizer_selense/utilizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilizer_selense/utilizer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,29 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature/environment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="home.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/home.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="framework.ini" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/framework.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="26">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -56,8 +43,8 @@
       <file leaf-file-name="commonsteps.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="-22">
+              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
               <folding>
                 <element signature="e#31#60#0" expanded="true" />
               </folding>
@@ -65,29 +52,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/feature/environment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="145" column="16" lean-forward="true" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tls.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tls.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-828">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="runner_allure.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runner_allure.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utilizer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utilizer_selense/utilizer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="317" column="4" selection-start-line="317" selection-start-column="4" selection-end-line="317" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="runner_without_allure.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runner_without_allure.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="312">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -178,7 +165,6 @@
         <option value="$PROJECT_DIR$/instanceinfo.ini" />
         <option value="$USER_HOME$/anaconda3/lib/python3.6/site-packages/page_objects/__init__.py" />
         <option value="$PROJECT_DIR$/feature/po/homepage.py" />
-        <option value="$PROJECT_DIR$/utilizer_selense/utilizer.py" />
         <option value="$PROJECT_DIR$/test/tt.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requirements.txt" />
@@ -190,6 +176,7 @@
         <option value="$PROJECT_DIR$/behave.ini" />
         <option value="$PROJECT_DIR$/framework.ini" />
         <option value="$PROJECT_DIR$/feature/home.feature" />
+        <option value="$PROJECT_DIR$/utilizer_selense/utilizer.py" />
         <option value="$PROJECT_DIR$/feature/steps/commonsteps.py" />
         <option value="$PROJECT_DIR$/feature/environment.py" />
         <option value="$PROJECT_DIR$/runner_allure.sh" />
@@ -205,7 +192,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -214,6 +201,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,7 +229,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -403,7 +390,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -412,10 +399,11 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.39030302" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32969698" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32969698" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.31030303" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3090129" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.8962804" visible="true" weight="0.32" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31759655" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3272727" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -428,7 +416,6 @@
       <window_info anchor="right" id="R Packages" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3272727" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="12" weight="0.32969698" />
     </layout>
     <layout-to-restore>
@@ -470,7 +457,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/feature/login.feature" />
     <entry file="file://$PROJECT_DIR$/feature/steps/loginsteps.py" />
     <entry file="file://$PROJECT_DIR$/env.ini" />
     <entry file="file://$PROJECT_DIR$/feature/enviroment.py" />
@@ -543,20 +529,13 @@
     <entry file="file://$PROJECT_DIR$/instanceinfo.ini" />
     <entry file="file://$PROJECT_DIR$/pipe.py" />
     <entry file="file://$PROJECT_DIR$/test.sh" />
-    <entry file="file://$PROJECT_DIR$/tls.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="1976">
-          <caret line="76" column="2" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/debug.log">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="312">
           <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/feature/po/homepage.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -593,44 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/framework.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilizer_selense/utilizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="317" column="4" selection-start-line="317" selection-start-column="4" selection-end-line="317" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#31#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature/home.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feature/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/runner_without_allure.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -638,10 +579,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/framework.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilizer_selense/utilizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="79" column="42" selection-start-line="79" selection-start-column="42" selection-end-line="79" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tls.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-828">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="145" column="16" lean-forward="true" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/home.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feature/steps/commonsteps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+          <folding>
+            <element signature="e#31#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/runner_allure.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+        <state relative-caret-position="312">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ Feature: TLS : Validate home page features
         | Title               |
         | Home Page - The TLS |
 
-  @unittest @uat @prod @staging
+  @try @uat @prod @staging
     # To check all the header link response code
   Scenario: Make sure all the header links are working
       Given Gather all the header link

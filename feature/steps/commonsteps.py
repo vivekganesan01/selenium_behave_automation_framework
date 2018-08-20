@@ -27,6 +27,8 @@ def step_impl(context):
     for each_webelement in homepage.http_homepage_header_hyperlinks:
         context.tag_http[each_webelement.text] = each_webelement.get_attribute("href")
         utilizer.time_elapsed(2)
+    for x in context.tag_http.keys():
+        logging.info(x)
 
 @then("Check the http response code for the link")
 def step_impl(context):
