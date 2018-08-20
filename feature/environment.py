@@ -142,7 +142,7 @@ def _environment_config(context):
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver")
                 chrome_options = webdriver.ChromeOptions()
                 chrome_options.add_argument('--no-sandbox')
-                #chrome_options.add_argument('--headless')
+                chrome_options.add_argument('--headless')
                 chrome_options.add_argument('--disable-gpu')
                 #chrome_options.add_argument('--dns-prefetch-disable')
                 #chrome_options.add_argument("--disable-extensions")
