@@ -137,7 +137,7 @@ def step_impl(context):
 @given('As a user, Click on subcription button')
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
-    utilizer.click_on_element(homepage.subscribe_button)
+    utilizer.click_on_element(homepage.subscribe_button,"homepage.subscribe_button")
     utilizer.time_elapsed(5)
 
 
@@ -151,7 +151,7 @@ def step_impl(context,title):
 @then('Try validating log out feature')
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
-    utilizer.click_on_element(homepage.logout_button)
+    utilizer.click_on_element(homepage.logout_button,"homepage.logout_button")
     utilizer.page_element_validator(homepage.login_button,"homepage.login_button")
 
 
@@ -195,6 +195,7 @@ def step_impl(context):
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
     utilizer.scroll_to_bottom()
+    utilizer.time_elapsed(5)
     utilizer.visibility_of_ele_located(homepage.to_read_full_article_text,"homepage.to_read_full_article_text")
 
 
@@ -234,9 +235,9 @@ def step_impl(context):
     Before_clicking_gototop = utilizer.active_driver_instance().execute_script('return window.pageYOffset;')
     utilizer.visibility_of_ele_located(homepage.go_to_top_button,"homepage.go_to_top_button")
     utilizer.click_on_element(homepage.go_to_top_button,"homepage.go_to_top_button")
-    utilizer.time_elapsed(5)
+    utilizer.time_elapsed(6)
     After_clicking_gototop = utilizer.active_driver_instance().execute_script('return window.pageYOffset;')
-    logging.info("Before_gototop:{}, After_gototop:{}".format(Before_clicking_gototop,After_clicking_gototop))
+    logging.info("Before_gototop :{}, After_gototop: {}".format(Before_clicking_gototop,After_clicking_gototop))
     assert After_clicking_gototop == 0 ,utilizer.log_it("GO TO TOP might not be worked as expected. "
                                                         "Before_gototop:{} After_gototop:{}".format(Before_clicking_gototop,After_clicking_gototop))
 
@@ -245,18 +246,18 @@ def step_impl(context):
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
     utilizer.click_on_element(homepage.subject_link,"homepage.subject_link")
-    utilizer.time_elapsed(6)
+    utilizer.time_elapsed(8)
 
 
 @then('Open any section')
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
-    utilizer.click_on_element(homepage.return_single_section(),"homepage.return_single_section()")
-    utilizer.time_elapsed(6)
+    utilizer.move_to_element_click(homepage.return_single_section())
+    utilizer.time_elapsed(8)
 
 
 @then('Open any article inside the section')
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
-    utilizer.click_on_element(homepage.return_single_article_under_subjects(),"homepage.return_single_article_under_subjects()")
-    utilizer.time_elapsed(6)
+    utilizer.move_to_element_click(homepage.return_single_article_under_subjects())
+    utilizer.time_elapsed(8)

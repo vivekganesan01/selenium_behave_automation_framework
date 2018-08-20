@@ -290,8 +290,6 @@ def after_scenario(context,scenario):
     logging.info("{} : {}".format(scenario.name, STATUS))
     logging.info("{}".format("*" * 75))
     logging.info(" ")
-    # close driver
-    utilizer.driver.close()
 
 
 def before_step(context,step):
