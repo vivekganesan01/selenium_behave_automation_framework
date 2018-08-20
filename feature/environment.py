@@ -147,7 +147,7 @@ def _environment_config(context):
                 #chrome_options.add_argument('--dns-prefetch-disable')
                 #chrome_options.add_argument("--disable-extensions")
                 #chrome_options.add_argument("--disable-dev-shm-usage")
-                WINDOW_SIZE = "1920,1080"
+                WINDOW_SIZE = "1280,276"
                 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
                 #capabilities = chrome_options.to_capabilities()
                 context.driver = webdriver.Chrome(chrome_options=chrome_options)
