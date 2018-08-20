@@ -11,13 +11,13 @@ Feature: TLS : Validate home page features
         | Title               |
         | Home Page - The TLS |
 
-  @unittest2 @uat @prod @staging
+  @unittest @uat @prod @staging
     # To check all the header link response code
   Scenario: Make sure all the header links are working
       Given Gather all the header link
       Then Check the http response code for the link
 
-  @unittest3 @uat @prod @staging
+  @unittest @uat @prod @staging
     # To check subject page
   Scenario: Make sure subject page works as expected
       Given Navigate to subject category
