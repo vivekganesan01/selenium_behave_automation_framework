@@ -151,7 +151,7 @@ def _environment_config(context):
                 #capabilities = chrome_options.to_capabilities()
                 context.driver = webdriver.Chrome(chrome_options=chrome_options)
                 #context.driver = webdriver.Chrome(executable_path="drivers/chromedriver", options=chrome_options)
-                context.driver.set_page_load_timeout(30)
+                #context.driver.set_page_load_timeout(30)
             except Exception:
                 logging.info(" * - < ..... Exception : unable to config chrome driver ")
                 logging.info(" * - <.....> - {}".format(sys.exc_info()[1]))

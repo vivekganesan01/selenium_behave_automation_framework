@@ -23,9 +23,10 @@ def step_impl(context):
 def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
     context.tag_http = {}  #  variable to hold all the TLS header links names and https links
+    utilizer.time_elapsed(4)
     for each_webelement in homepage.http_homepage_header_hyperlinks:
         context.tag_http[each_webelement.text] = each_webelement.get_attribute("href")
-
+        utilizer.time_elapsed(2)
 
 @then("Check the http response code for the link")
 def step_impl(context):
