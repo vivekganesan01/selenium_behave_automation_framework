@@ -112,20 +112,20 @@ Feature: TLS : Validate home page features
       Then Search should return related article
 
 
-  @uat @prod @staging @try
+  @uat @prod @staging
     # Validating go to top button on section
   Scenario: Validate go to top feature
       Given Open subjects page
       Then Open any section
       Then Navigate to bottom and validate go to top button
 
-  @uat @prod @staging @try
+  @uat @prod @staging
     # validate go to on each page
   Scenario: Validate go to top on each page
       Given Click on latest edition
       Then Navigate to bottom and validate go to top button
 
-  @uat @prod @staging @try
+  @uat @prod @staging
    # Validating go to top on article page
   Scenario: Validate go to top on single article
       Given Open subjects page
