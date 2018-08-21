@@ -1,7 +1,7 @@
 SP - Automation Framework
 -------------------------
 author = Vivek Ganesan
-Version = v1.0
+Version = v1.0.0
 
 Project Flow:
 	 * Jenkins Pipeline -> Docker images {Chrome/Python/Selenium/Allure} -> Behave BDD python code.
