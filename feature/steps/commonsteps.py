@@ -200,6 +200,7 @@ def step_impl(context):
     homepage = HomePage(utilizer.active_driver_instance())
     utilizer.scroll_to_bottom()
     utilizer.time_elapsed(5)
+    utilizer.move_to_element(homepage.to_read_full_article_text)
     utilizer.visibility_of_ele_located(homepage.to_read_full_article_text,"homepage.to_read_full_article_text")
 
 

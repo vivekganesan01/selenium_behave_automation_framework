@@ -497,9 +497,20 @@ def scroll_to_bottom():
 
 def move_to_element_click(webelement):
     """
-    Move to given web element
+    Move to given web element and perform click
     :param webelement: DOM
     :return: none
     """
     logging.info(" <.> - Mouse over to element and perform clicking")
     ActionChains(active_driver_instance()).move_to_element(webelement).click().perform()
+
+
+
+def move_to_element(webelement):
+    """
+    Move to given web element
+    :param webelement: DOM
+    :return: none
+    """
+    logging.info(" <.> - Mouse over to element")
+    ActionChains(active_driver_instance()).move_to_element(webelement).perform()
