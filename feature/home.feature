@@ -62,7 +62,7 @@ Feature: TLS : Validate home page features
         | section |
         | ARTS    |
 
-  @unittest @prod
+  @ignore
     # Check login feature
   Scenario Outline: Make sure subscribe login and logout functionality works
       Given As a user, Click on login
@@ -82,7 +82,7 @@ Feature: TLS : Validate home page features
       Then User should be in the "Subscribe to The Times Literary Supplement" page
 
 
-  @prod @staging
+  @ignore
     # check private article after login
   Scenario Outline: Check the private article for logged in user
       Given As a user, Click on login
